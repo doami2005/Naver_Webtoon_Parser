@@ -1,3 +1,10 @@
+/*
+
+ParseWebtoon ('사신소년', 1, true);
+ParseWebtoon ('복학왕', 3, false);
+
+*/
+
 function ParseWebtoon (name, count, linktf) {
     if (count && (isNaN(count) || count<1)) return "Count is out of limit.";
     let web = Jsoup.connect("https://m.comic.naver.com/search/result.nhn?keyword=" + name).get().select(".lst");
